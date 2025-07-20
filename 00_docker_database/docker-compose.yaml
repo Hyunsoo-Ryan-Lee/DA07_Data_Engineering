@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql
+    container_name: mysql_db
+    ports:
+      - "3300:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_USER=codeit
+      - MYSQL_PASSWORD=sprint
+      - MYSQL_DATABASE=docker_mysql
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    ports:
+      - "5430:5432"
+    environment:
+      - POSTGRES_USER=codeit
+      - POSTGRES_PASSWORD=sprint
+      - POSTGRES_DB=docker_postgres
